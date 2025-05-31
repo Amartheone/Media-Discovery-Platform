@@ -63,6 +63,10 @@ A fully responsive and stylish **Movie Library Website** built using **HTML and 
 ---
 
 ## 🚀 Getting Started
+## 🌐 Live Preview
+
+[Live Site Here](https://amartheone.github.io/Media-Discovery-Platform/)
+
 ## 📸 Screenshots
 
 ### 💻Laptop view
