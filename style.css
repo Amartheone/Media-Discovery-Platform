@@ -1,0 +1,297 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background-color: #111;
+  color: #f5f5f5;
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #1f1f1f;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.5rem;
+  color: #ff4757;
+  font-weight: bold;
+}
+
+.nav-links a {
+  color: #f5f5f5;
+  text-decoration: none;
+  margin: 0 15px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ff6b81;
+}
+
+#menu-toggle, .hamburger {
+  display: none;
+}
+
+/* Hamburger Menu */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #222;
+    width: 100%;
+  }
+
+  #menu-toggle:checked ~ .nav-links {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #fff;
+  }
+}
+
+/* Hero */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 200px 140px 150px;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+}
+
+.hero-left h1 {
+  font-size: 2.3rem;
+}
+
+.hero-left h1 span {
+  color: #ff6b81;
+}
+
+.hero-left p {
+  margin: 15px 0;
+  font-size: 1.2rem;
+}
+
+.hero-btn {
+  background: #ff4757;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 20px;
+  transition: background 0.3s;
+}
+
+.hero-btn:hover {
+  background: #ff6b81;
+}
+
+
+/* Section Basics */
+.section {
+  padding: 60px 30px;
+  text-align: center;
+}
+
+.subtitle {
+  color: #ccc;
+  margin-bottom: 30px;
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background: #222;
+  border-radius: 10px;
+  width: 300px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card-info {
+  padding: 15px;
+  text-align: left;
+}
+
+.duration {
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  background: #444;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+.card-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.7);
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s;
+}
+
+.card:hover .card-hover {
+  opacity: 1;
+}
+
+.card-hover a {
+  background: #ff4757;
+  color: #fff;
+  padding: 8px 15px;
+  text-decoration: none;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.watchlist {
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked + .watchlist {
+  content: "✓";
+  color: #2ed573;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  right: 0; bottom: 0;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+}
+
+input[type="checkbox"]:checked ~ .modal {
+  display: flex;
+}
+
+.modal-content {
+  background: #1e1e1e;
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+}
+
+.close {
+  font-size: 1.5rem;
+  float: right;
+  cursor: pointer;
+  color: #ff6b81;
+}
+
+/* Reviews */
+.reviews {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.review-card {
+  background: #2f2f2f;
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+}
+
+.review-card img {
+  border-radius: 50%;
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+.review-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: auto;
+  gap: 10px;
+}
+
+.review-form input,
+.review-form textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.review-form button {
+  background: #ff4757;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Footer */
+footer {
+  background: #111;
+  color: #ccc;
+  padding: 40px;
+  text-align: center;
+}
+
+.footer-links a {
+  color: #ccc;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.footer-icons img {
+  margin: 10px 5px;
+  transition: transform 0.3s;
+}
+
+.footer-icons img:hover {
+  transform: scale(1.2);
+}
