@@ -76,12 +76,12 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 200px 140px 150px;
+  padding: 160px 140px 150px;
   background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
 }
 
 .hero-left h1 {
-  font-size: 2.3rem;
+  font-size: 2.5rem;
 }
 
 .hero-left h1 span {
@@ -104,6 +104,38 @@ body {
 
 .hero-btn:hover {
   background: #ff6b81;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  .hero-left, .hero-right {
+    width: 100%;
+  }
+
+  .hero-right img {
+    width: 100%;
+    max-width: 300px;
+    margin-top: 30px;
+  }
+
+  .hero-left h1 {
+    font-size: 2rem;
+  }
+
+  .hero-left p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+
+  .hero-btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
 }
 
 

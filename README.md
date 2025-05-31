@@ -63,7 +63,16 @@ A fully responsive and stylish **Movie Library Website** built using **HTML and 
 ---
 
 ## 🚀 Getting Started
+## 📸 Screenshots
 
+### 💻Laptop view
+![Desktop Screenshot](Desktop.jpg)
+
+### 📱 Mobile View
+![Mobile Screenshot](mobile.jpg)
+
+### Normal view
+![The normal Screenshot](Normal.jpg)
 🙌 Acknowledgements
 	•	Movie covers used from IMDb
 	•	Social icons from Font Awesome
